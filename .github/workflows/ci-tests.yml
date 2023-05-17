@@ -1,0 +1,38 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  Tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout lively.next
+        uses: actions/checkout@v3
+        with:
+          repository: LivelyKernel/lively.next
+          ref: 56c7c329c3ecaa93021f953c1bfc35f30226a967
+      - run: pwd
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.12.1'
+      - name: Install lively.next
+        run: |
+          chmod a+x ./install.sh
+          ./install.sh
+      - name: Checkout Project Repository
+        uses: actions/checkout@v3
+        with:
+          path: local_projects/partsbin
+      - name: Start lively.next
+        run: |
+          chmod a+x ./start.sh
+          ./start.sh > /dev/null 2>&1 &
+          # wait until server is guaranteed to be running
+          sleep 30
+      - name: Run CI Test Script 
+        run:  ./scripts/test.sh partsbin

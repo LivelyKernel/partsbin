@@ -1,0 +1,31 @@
+{
+  "name": "partsbin",
+  "author": {
+    "name": "linusha"
+  },
+  "description": "A repository to collect and share components in lively.next.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LivelyKernel/partsbin"
+  },
+  "scripts": {
+    "build": "rm -rf build/* && export MINIFY='' && ./tools/build.sh",
+    "build-minified": "rm -rf build/* && export MINIFY=true && ./tools/build.sh"
+  },
+  "dependencies": {
+    "@rollup/plugin-json": "4.1.0",
+    "rollup": "^2.70.2",
+    "rollup-plugin-export-default": "1.4.0",
+    "rollup-plugin-polyfill-node": "0.9.0"
+  },
+  "lively": {
+    "projectDependencies": [
+      {
+        "name": "exampleOwner/exampleProject",
+        "commit": "aHash"
+      }
+    ],
+    "boundLivelyVersion": "56c7c329c3ecaa93021f953c1bfc35f30226a967"
+  },
+  "version": "0.1.1"
+}
