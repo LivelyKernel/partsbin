@@ -1,3 +1,3 @@
 # partsbin
 
-No description for package partsbin yet.
+A repository to collect and share components in lively.next.

@@ -19,13 +19,8 @@
     "rollup-plugin-polyfill-node": "0.9.0"
   },
   "lively": {
-    "projectDependencies": [
-      {
-        "name": "exampleOwner/exampleProject",
-        "commit": "aHash"
-      }
-    ],
-    "boundLivelyVersion": "56c7c329c3ecaa93021f953c1bfc35f30226a967"
+    "projectDependencies": [ ],
+    "boundLivelyVersion": "72ab6bb5f09ead75541362dfc1e915db45425cd6"
   },
   "version": "0.1.1"
 }
