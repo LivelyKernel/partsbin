@@ -19,8 +19,8 @@
     "rollup-plugin-polyfill-node": "0.9.0"
   },
   "lively": {
-    "projectDependencies": [ ],
-    "boundLivelyVersion": "72ab6bb5f09ead75541362dfc1e915db45425cd6"
+    "projectDependencies": [],
+    "boundLivelyVersion": "5b41156054ea4d84263190432d45b773b780ca31"
   },
   "version": "0.1.1"
 }

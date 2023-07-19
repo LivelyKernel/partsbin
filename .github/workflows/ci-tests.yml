@@ -14,8 +14,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: LivelyKernel/lively.next
-          ref: 72ab6bb5f09ead75541362dfc1e915db45425cd6
-      - run: pwd
+          ref: 5b41156054ea4d84263190432d45b773b780ca31
       - name: Setup node
         uses: actions/setup-node@v2
         with:
@@ -27,12 +26,11 @@ jobs:
       - name: Checkout Project Repository
         uses: actions/checkout@v3
         with:
-          path: local_projects/partsbin
+          path: local_projects/LivelyKernel--partsbin
       - name: Start lively.next
         run: |
-          chmod a+x ./start.sh
-          ./start.sh > /dev/null 2>&1 &
+          ./start-server.sh > /dev/null 2>&1 &
           # wait until server is guaranteed to be running
           sleep 30
       - name: Run CI Test Script 
-        run:  ./scripts/test.sh LivelyKernel-partsbin
+        run:  ./scripts/test.sh LivelyKernel--partsbin
