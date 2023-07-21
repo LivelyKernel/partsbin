@@ -18,6 +18,11 @@ class ThermometerModel extends ViewModel {
           signal(this.view, 'numberChanged', v);
         }
       },
+      expose: {
+        get () {
+          return ['number'];
+        }
+      },
       bindings: {
         get () {
           return [
@@ -48,6 +53,7 @@ class ThermometerModel extends ViewModel {
     this.number = num.clamp(this._startValue + offset, this.min, this.max);
   }
 }
+
 
 const Thermometer = component({
   type: Ellipse,
