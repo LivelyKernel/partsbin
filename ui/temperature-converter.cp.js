@@ -9,18 +9,10 @@ export class TemperatureConverterModel extends ViewModel {
   static get properties () {
     return {
       celsius: {
-        defaultValue: 0,
-        set (c) {
-          this.setProperty('celsius', c);
-          this.setProperty('fahrenheit', c * (9 / 5) + 32);
-        }
+        defaultValue: 0
       },
       fahrenheit: {
-        defaultValue: 32,
-        set (f) {
-          this.setProperty('fahrenheit', f);
-          this.setProperty('celsius', (f - 32) * (5 / 9));
-        }
+        defaultValue: 32
       },
       bindings: {
         get () {
