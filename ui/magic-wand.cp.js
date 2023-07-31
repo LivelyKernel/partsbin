@@ -1,4 +1,4 @@
-import { component, ConstraintLayout, ViewModel } from 'lively.morphic';
+import { component, ViewModel } from 'lively.morphic';
 import { pt } from 'lively.graphics/geometry-2d.js';
 import { Color } from 'lively.graphics/color.js';
 import { Polygon } from 'lively.morphic/morph.js';
@@ -14,9 +14,8 @@ class MagicWandModel extends ViewModel {
     };
   }
 
-  openInWorld () {
+  viewDidLoad () {
     const { star } = this.ui;
-    this.withoutExposedPropsDo(() => this.view.openInWorld());
     star.startStepping(5, 'rotateBy', Math.PI / 180);
   }
 }
