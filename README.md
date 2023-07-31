@@ -15,3 +15,8 @@ A Magic Wand in spirit of one of the original [`LivelyKernel` demos](https://www
 ### Thermometer
 
 A thermometer which can be used as an alternative GUI for number-widgets.
+
+### Temperature Converter
+
+A simple demo application converting Celsius in Fahrenheit, which provides two alternative front-ends, demonstrating the reuse of `ViewModel`s.
+ 
