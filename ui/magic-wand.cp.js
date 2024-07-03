@@ -4,16 +4,6 @@ import { Color } from 'lively.graphics/color.js';
 import { Polygon } from 'lively.morphic/morph.js';
 
 class MagicWandModel extends ViewModel {
-  static get properties () {
-    return {
-      expose: {
-        get () {
-          return ['openInWorld'];
-        }
-      }
-    };
-  }
-
   viewDidLoad () {
     const { star } = this.ui;
     star.startStepping(5, 'rotateBy', Math.PI / 180);
